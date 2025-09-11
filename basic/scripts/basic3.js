@@ -146,7 +146,7 @@ function hello1(user){
 const hello2 = function(user){
     return alert('hello ' +user)
 }
-hello2('kim'); // 익명함수->변수명 사용
+//hello2('kim'); // 익명함수->변수명 사용
 
 // 익명함수 + 화살표함수(ES6)
 // 변수키워드 변수명 대입연산자 (매개변수) 화살표 {실행}
