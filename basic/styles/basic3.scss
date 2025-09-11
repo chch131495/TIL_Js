@@ -1,0 +1,27 @@
+@mixin slide_w_h_pc {
+    width:800px; height:350px;
+    border-width:1px;
+    border-style:solid;
+}
+@mixin flex-row {
+    display:flex; flex-flow:row nowrap;
+    justify-content:flex-start;
+    align-items:center;
+}
+$main-color:yellow;
+$sub-color:red;
+#slide_container {
+    background-color:pink;
+    width:800px; overflow:hidden;
+    .slide_wrap{
+        color:red;
+        @include flex-row; //자식한테 적용
+        width:calc(800px * 2); //화면고정
+        transform:translateX(-800px);//슬라이드2보이게하는 값
+        .slide {
+            @include slide_w_h_pc;
+        }
+        .slide1 {border-color:$sub-color; color:yellow}
+        .slide2 {border:1px solid $main-color;}
+    }
+}
