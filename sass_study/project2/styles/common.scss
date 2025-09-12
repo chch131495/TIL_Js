@@ -1,0 +1,34 @@
+$color-main:#ffffd4;
+$btn-dark:#000;
+$font-main-size:3rem;
+$font-subtitle-size:1.2rem;
+$font-weight:700;
+$font-sub-weight:600;
+@mixin button {
+    width:30px; height:30px;
+    padding:10px; margin:0 auto;
+}
+@mixin flew-flow {
+    display:flex; flex-flow:row nowrap;
+    justify-content:flex-start;
+    align-items:center;
+}
+@mixin bg-cover {
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+@mixin slide-btn {
+    border : 1px solid #000;
+    border-radius:30px;
+    padding:6px 24px;
+}
+@mixin pst-ab {
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:max-content;
+}
+@mixin pc_w_h {
+    width:1360px; height:750px;
+    margin:50px auto; padding:50px;
+}

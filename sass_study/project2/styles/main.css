@@ -1,0 +1,40 @@
+#slide_wrap {
+  background: #ffffd4;
+  width: 1360px;
+  height: 750px;
+  margin: 50px auto;
+  padding: 50px;
+  background-image: url(../images/home_chun_yellow_250813.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 850px auto;
+  background-position: 120% center;
+}
+#slide_wrap .slide_container {
+  height: 100%;
+}
+#slide_wrap .slide_container .slide {
+  height: 100%;
+}
+#slide_wrap .slide_container .slide .title_contents h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 130%;
+  padding-top: 50px;
+}
+#slide_wrap .slide_container .slide .title_contents p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+#slide_wrap .slide_container .slide .bnr_link {
+  margin-top: 350px;
+}
+#slide_wrap .slide_container .slide .bnr_link a {
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 6px 24px;
+}
+
+/*# sourceMappingURL=main.css.map */
