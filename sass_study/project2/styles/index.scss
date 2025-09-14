@@ -4,7 +4,6 @@
 #slide_wrap {
     background:$color-main;
     @include pc_w_h;
-    background-image:url(../images/home_chun_yellow_250813.png);
     @include bg-cover;
     background-size:850px auto;
     background-position:120% center;
@@ -24,11 +23,36 @@
                 }
             }
             .bnr_link {margin-top:350px;
-                a {@include slide-btn}
-                .education_btn {}
+                a {
+                    @include slide-btn; border:1px solid $btn-dark;
+                    font-weight:600; 
+                }
+                .education_btn { background-color: $btn-dark; color:$color-main;}
                 .news_btn {}
             }
         }
-        .slide1 {}
+        .slide1 { @include bg-cover;
+            background-size:800px auto;
+            background-position:120% center;
+            background-image:url(../images/home_chun_yellow_250813.png);
+        }
+        .slide2 {}
+        .slide3 {}
+    }
+    .slide_page_btn {
+        @include pst-ab; margin-top:18px;
+        top:auto;  left:120px;
+        @include flex-flow; gap:20px; 
+        .pagenation {@include flex-flow; gap:10px;
+        span{}
+        .current{font-weight:$font-sub-weight;}
+        .bar {width:100px; height:2px; background-color:$btn-dark; overflow: hidden;}
+        .total {font-weight:$font-sub-weight;}
+        }
+    .btn_g {
+        button {background:none;}
+        #prev {margin-right:20px;}
+        #next {}
+    }
     }
 }

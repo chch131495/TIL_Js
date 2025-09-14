@@ -2,9 +2,8 @@
   background: #ffffd4;
   width: 1360px;
   height: 750px;
-  margin: 50px auto;
+  margin: 50px auto 0;
   padding: 50px;
-  background-image: url(../images/home_chun_yellow_250813.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -34,7 +33,64 @@
 #slide_wrap .slide_container .slide .bnr_link a {
   border: 1px solid #000;
   border-radius: 30px;
-  padding: 6px 24px;
+  width: 230px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #000;
+  font-weight: 600;
+}
+#slide_wrap .slide_container .slide .bnr_link .education_btn {
+  background-color: #000;
+  color: #ffffd4;
+}
+#slide_wrap .slide_container .slide1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 800px auto;
+  background-position: 120% center;
+  background-image: url(../images/home_chun_yellow_250813.png);
+}
+#slide_wrap .slide_page_btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: max-content;
+  margin-top: 18px;
+  top: auto;
+  left: 120px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+#slide_wrap .slide_page_btn .pagenation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+#slide_wrap .slide_page_btn .pagenation .current {
+  font-weight: 600;
+}
+#slide_wrap .slide_page_btn .pagenation .bar {
+  width: 100px;
+  height: 2px;
+  background-color: #000;
+  overflow: hidden;
+}
+#slide_wrap .slide_page_btn .pagenation .total {
+  font-weight: 600;
+}
+#slide_wrap .slide_page_btn .btn_g button {
+  background: none;
+}
+#slide_wrap .slide_page_btn .btn_g #prev {
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

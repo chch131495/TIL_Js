@@ -4,11 +4,12 @@ $font-main-size:3rem;
 $font-subtitle-size:1.2rem;
 $font-weight:700;
 $font-sub-weight:600;
+
 @mixin button {
     width:30px; height:30px;
     padding:10px; margin:0 auto;
 }
-@mixin flew-flow {
+@mixin flex-flow {
     display:flex; flex-flow:row nowrap;
     justify-content:flex-start;
     align-items:center;
@@ -21,7 +22,9 @@ $font-sub-weight:600;
 @mixin slide-btn {
     border : 1px solid #000;
     border-radius:30px;
-    padding:6px 24px;
+    width:230px; line-height:50px;
+    text-align:center;
+    display:inline-block;
 }
 @mixin pst-ab {
     position:absolute;
@@ -30,5 +33,5 @@ $font-sub-weight:600;
 }
 @mixin pc_w_h {
     width:1360px; height:750px;
-    margin:50px auto; padding:50px;
+    margin:50px auto 0; padding:50px;
 }
