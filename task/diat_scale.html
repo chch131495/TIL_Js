@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다이어트 체중계</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/diat_scale.css">
+    <script src="./script/diat_scale.js"defer></script>
+</head>
+<body>
+    <div id="wrap">
+    <h1>다이어트 체중계</h1>
+        <div class="input-box">
+            <label for="height">현재 키 (cm)</label>
+            <input type="number" id="height" placeholder="">
+            <label for="weight">현재 체중 (kg)</label>
+            <input type="number" id="weight" placeholder="">
+        </div>
+        <div class="btn-box">
+            <button id="checkbtn">확인</button>
+        </div>
+        <div class="result-box">
+            <p id="resultMsg"></p>
+        </div>
+    </div>
+</body>
+</html>
