@@ -1,5 +1,9 @@
+body {
+    background-image:url(https://i.pinimg.com/736x/9b/51/e0/9b51e01ab574aa24902736319e6f6c49.jpg);
+    background-size:contain;
+}
 #wrap {
-    width:500px; height:500px;
+    width:750px; height:600px;
     background-image:url(https://i.pinimg.com/736x/3c/82/cd/3c82cdfd9115726955c4e4ce089b432f.jpg);
     background-repeat:no-repeat;
     background-size:contain;
@@ -10,23 +14,29 @@
     align-items:center;
 }
 #wrap h1 {
-    font-size:2rem; font-weight:700;
-    color:#fff; padding:20px 0;
+    font-size:2.3rem; font-weight:700;
+    color:#E4004B; padding:50px 0 35px;
 }
-#wrap .input-box {
-    display:flex; flex-flow:column nowrap;
-    margin-bottom:50px; width:50%;
+#wrap p {
+    font-size:1.25rem; line-height:150%;
+    color:#FF6363; margin-bottom:20px;
 }
-#wrap .input-box label {
-    margin-bottom:20px;
-    font-size:1.25rem; font-weight:600; color:#aaa;
+#wrap #weightForm { }
+#wrap #weightForm .input-list {}
+#wrap #weightForm .input-list li {}
+#wrap #weightForm .input-list li > input {
+    width: 200px; height:30px; 
+    line-height:150%; margin-bottom:20px;
+    border-radius:10px;
+    text-align:center; color:#aaa;
+    font-weight:600;
 }
-#wrap .input-box input {
-    padding:10px; margin-bottom:20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    text-align:center;
+#weightForm .input_hg {}
+#wrap #weightForm .input_wg {}
+#wrap #weightForm #result {}
+#wrap #weightForm #checkBtn {
+    font-size:0.875rem; font-weight:600; color:#f5f5f5;
+    background-color:#E4004B;
+    border-radius:10px;
+    padding:10px;
 }
-#wrap .btn-box {}
-#wrap .btn-box #checkbtn {}
-#wrap .result-box {}
