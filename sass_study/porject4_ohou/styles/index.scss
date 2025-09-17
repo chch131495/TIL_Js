@@ -1,0 +1,207 @@
+@use './common.scss' as *;
+#wrap {
+    header {
+        height:52px; padding:0 80px;
+        @include flex-row; gap:10px;
+        border:1px solid $color-gray-light-lv2;
+        border-left:0; border-right:0;
+        a {font-size:$font-size-m; font-weight:700;}
+    }
+    main {@include content-w;
+        .path {
+            padding:14px, 0;
+            font-size:$font-size-s;
+            margin:26px 0 26px;
+            a {
+                font-size:$font-size-s; position:relative; padding-right:12px;
+                &::after {
+                    @include after_before; content:'>'; right:0; left:auto; top:3px;
+                    font-size:$font-size-xs; color:$color-gray-medium;
+                }
+                &:last-child::after {display:none}
+            }
+        }
+        .container {
+            @include flex-row; align-items:flex-start;
+            .overview_img {
+                @include flex-row;
+                align-items:flex-start; gap:10px;
+                .thumnail {
+                    @include flex-col; gap:8px;
+                    align-items:flex-start; width:56px;
+                    a { 
+                        width:56px; height:56px;
+                        border-radius:5px; overflow:hidden;
+                        img {width:100%; height:auto;}
+                    }
+                } 
+                .overview {
+                    @include thumnail_big; margin-right:24px;
+                    img {width:559px; height:auto;}
+                }
+            }
+            > .contents {
+                @include test-bg3;
+                @include flex-col; justify-content:flex-start; align-items:flex-start;
+                width:100%; height:auto;
+                svg {fill:$color-point;}
+                .brand {margin-bottom:15px;
+                    a{font-size:$font-size-s;}}
+                .product_info {
+                    margin-bottom:25px; width:100%; /* 부모의 크기를 설정 */
+                    display:flex; justify-content:space-between; align-items:center;
+                    h1 {
+                        font-size:$font-size-l; margin:0; padding-right:10px;
+                    }
+                    .right_icon {
+                        @include flex-row; align-items:center; justify-content:flex-end;
+                        .scrap {
+                            display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
+                            .bookmark{
+                                fill:$color-white;
+                                stroke:$color-gray-light-lv2;
+                                stroke-width:2;
+                                width:24px; height:24px;
+                            }
+                            span {
+                                display:flex; flex-flow:column;
+                                font-size:$font-size-s;
+                            }
+                        }.share { margin-left:10px;
+                            .share_icon {
+                                fill:$color-white;
+                                stroke:$color-gray-light-lv2;
+                                width:24px; height:24px;
+                            }
+                        }
+                    }
+                }
+                .review {
+                    display:flex; justify-content:space-between; align-items:center;
+                    margin-bottom:25px;
+                    .score {}
+                    .number {font-size:$font-size-xs; color:$color-point;}
+                }
+                .price_wrap {
+                    .sale_original_price {
+                        margin-bottom:25px;
+                        .sale {}
+                        .original {color:$color-gray-light-lv1;}
+                        .price_info {
+                            position:relative;
+                            .info_icon {
+                                transform:translateY(4px); width:14px;
+                                fill:$color-white;
+                            }
+                            .info {
+                                display:none;
+                                width:300px;
+                                transform:translateX(-50%); padding:10px;
+                                font-size:$font-size-xs; color:$color-gray-medium;
+                                line-height:170%;
+                            }
+                        }
+                    }
+                    .total_price {
+                        font-size:$font-size-xl; margin-bottom:25px;
+                        .price {font-weight:$font-weight;}
+                        span {}
+                        img {height:16px;}
+                    }
+                }
+                .benefit_ship {
+                    padding:20px 0 0;
+                    @include grid-6-2; font-size:$font-size-s;
+                    grid-template-columns:45px 1fr; gap:10px;
+                    grid-template-areas:
+                        'title1 cont1'
+                        'title2 cont2'
+                        '. cont3' /* 공백으로 두는 것 */
+                        '. cont4'
+                        '. cont5'
+                        '. cont6';
+                    dt {font-weight:$font-weight; margin-bottom:5px;
+                        &:nth-of-type(1) {grid-area:title1;}
+                        &:nth-of-type(2) {grid-area:title2;}
+                    }
+                    dd {
+                        em {}
+                        &.ship_info {}
+                        &:nth-of-type(1) {grid-area:cont1;}
+                        &:nth-of-type(2) {grid-area:cont2;}
+                        &:nth-of-type(3) {grid-area:cont3;}
+                        &:nth-of-type(4) {grid-area:cont4;}
+                        &:nth-of-type(5) {grid-area:cont5;}
+                        &:nth-of-type(6) {grid-area:cont6;}
+                    }
+                    dd {
+                        em {font-weight:$font-weight;}
+                    }
+                    .ship_info {
+                        background-color:$color-gray-light-lv3;
+                        padding:15px 10px;
+                        margin-bottom:25px;
+                        border-radius:5px;
+                        em {}
+                    }
+                }
+                #orderFrm {
+                    .product_opt {
+                        @include flex-col; align-items:flex-start; gap:6px;
+                        #color_select {
+                            @include product_opt;
+                            background-image:url("https://cdn-icons-png.flaticon.com/128/3916/3916853.png");
+                            background-repeat:no-repeat;
+                            background-position:right 10px center;
+                            background-size:16px;
+                            option {}
+                        }
+                        #size_select {
+                            @include product_opt;
+                            background-image:url("https://cdn-icons-png.flaticon.com/128/3916/3916853.png");
+                            background-repeat:no-repeat;
+                            background-position:right 10px center;
+                            background-size:16px;
+                            option {}
+                        }
+                    }.order_list {
+                        .info {
+                            .color {}
+                            .size {}
+                        }.close {}
+                        .num_price {
+                            .num {
+                                
+                                #minus_btn {}
+                                #order_num {width:30px; text-align:center;}
+                                #plus_btn {}
+                            }.price {}
+                        }
+                    }
+                    .order_price {
+                        display:flex; justify-content:space-between; align-items:center;
+                        h2 {font-size:$font-size-s;}
+                        .price {
+                            font-size:1.25rem; font-weight:$font-weight;
+                            em {}
+                        }
+                    }
+                    .order_btn {
+                        #cart_btn {
+                            @include cart_buy_btn;
+                            width:165px; font-size:1.063rem;
+                            margin:25px 0;
+                            background-color:$color-white; color:$color-point;
+                        }
+                        #buy_btn {
+                            @include cart_buy_btn;
+                            width:165px; font-size:1.063rem;
+                            margin:25px 0;
+                            background-color:$color-point; color:$color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
