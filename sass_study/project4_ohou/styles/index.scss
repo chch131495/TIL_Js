@@ -41,7 +41,6 @@
                 }
             }
             > .contents {
-                @include test-bg3;
                 @include flex-col; justify-content:flex-start; align-items:flex-start;
                 width:100%; height:auto;
                 svg {fill:$color-point;}
@@ -77,9 +76,9 @@
                     }
                 }
                 .review {
-                    display:flex; justify-content:space-between; align-items:center;
+                    @include flex-row; gap:14px; align-items:center;
                     margin-bottom:25px;
-                    .score {}
+                    .score {@include flex-row; gap:2px;}
                     .number {font-size:$font-size-xs; color:$color-point;}
                 }
                 .price_wrap {
@@ -91,21 +90,22 @@
                             position:relative;
                             .info_icon {
                                 transform:translateY(4px); width:14px;
-                                fill:$color-white;
+                                fill:$color-gray-light-lv3;
                             }
                             .info {
-                                display:none;
-                                width:300px;
+                                @include pst-ab; left:50%; top:25px;
                                 transform:translateX(-50%); padding:10px;
-                                font-size:$font-size-xs; color:$color-gray-medium;
-                                line-height:170%;
+                                color:$color-gray-medium; font-size:$font-size-xs;
+                                background:$color-white; line-height:1.4;
+                                border-radius:5px; box-shadow:0 5px 7px rgba(0,0,0,0.15);
+                                display:none;
                             }
                         }
                     }
                     .total_price {
                         font-size:$font-size-xl; margin-bottom:25px;
                         .price {font-weight:$font-weight;}
-                        span {}
+                        span {font-size:$font-size-m;}
                         img {height:16px;}
                     }
                 }
@@ -165,39 +165,42 @@
                             option {}
                         }
                     }.order_list {
+                        background:#ddd; padding:16px;
+                        position:relative; margin:10px 0;
                         .info {
+                            font-size:$font-size-s; margin:0 0 20px;
                             .color {}
                             .size {}
-                        }.close {}
-                        .num_price {
+                        }.close {@include pst-ab; left:auto; right:10px; top:10px;}
+                        .num_price {@include pst-ab; left:auto; right:20px; top:20px;
+                            @include flex-row; justify-content: space-between;
                             .num {
-                                
+                                background:$color-white; display:inline-block; padding:5px 10px;
+                                button {font-size:$font-size-m; font-weight:500;}
                                 #minus_btn {}
                                 #order_num {width:30px; text-align:center;}
                                 #plus_btn {}
-                            }.price {}
+                            }.price {padding:10px;}
                         }
-                    }
-                    .order_price {
+                    }.order_price {
                         display:flex; justify-content:space-between; align-items:center;
                         h2 {font-size:$font-size-s;}
                         .price {
                             font-size:1.25rem; font-weight:$font-weight;
-                            em {}
+                            em {font-weight:600;}
                         }
                     }
-                    .order_btn {
+                    .order_btn {@include flex-row; gap:6px; margin:10px 0 0;
+                        button {flex:1; @include cart_buy_btn; background:$color-white; border:1px solid $color-point;}
                         #cart_btn {
-                            @include cart_buy_btn;
                             width:165px; font-size:1.063rem;
                             margin:25px 0;
-                            background-color:$color-white; color:$color-point;
+                            border-color:$color-point;
                         }
                         #buy_btn {
-                            @include cart_buy_btn;
                             width:165px; font-size:1.063rem;
                             margin:25px 0;
-                            background-color:$color-point; color:$color-white;
+                            background-color: $color-point; color:$color-white;
                         }
                     }
                 }

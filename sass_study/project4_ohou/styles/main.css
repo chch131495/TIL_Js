@@ -90,7 +90,6 @@
   height: auto;
 }
 #wrap main .container > .contents {
-  background-color: pink;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -158,9 +157,19 @@
 }
 #wrap main .container > .contents .review {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
   align-items: center;
   margin-bottom: 25px;
+}
+#wrap main .container > .contents .review .score {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
 }
 #wrap main .container > .contents .review .number {
   font-size: 0.813rem;
@@ -178,16 +187,23 @@
 #wrap main .container > .contents .price_wrap .sale_original_price .price_info .info_icon {
   transform: translateY(4px);
   width: 14px;
-  fill: #fff;
+  fill: #dadce0;
 }
 #wrap main .container > .contents .price_wrap .sale_original_price .price_info .info {
-  display: none;
-  width: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  left: 50%;
+  top: 25px;
   transform: translateX(-50%);
   padding: 10px;
-  font-size: 0.813rem;
   color: #757575;
-  line-height: 170%;
+  font-size: 0.813rem;
+  background: #fff;
+  line-height: 1.4;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+  display: none;
 }
 #wrap main .container > .contents .price_wrap .total_price {
   font-size: 2rem;
@@ -195,6 +211,9 @@
 }
 #wrap main .container > .contents .price_wrap .total_price .price {
   font-weight: 800;
+}
+#wrap main .container > .contents .price_wrap .total_price span {
+  font-size: 1rem;
 }
 #wrap main .container > .contents .price_wrap .total_price img {
   height: 16px;
@@ -278,9 +297,52 @@
   background-position: right 10px center;
   background-size: 16px;
 }
+#wrap main .container > .contents #orderFrm .order_list {
+  background: #ddd;
+  padding: 16px;
+  position: relative;
+  margin: 10px 0;
+}
+#wrap main .container > .contents #orderFrm .order_list .info {
+  font-size: 0.875rem;
+  margin: 0 0 20px;
+}
+#wrap main .container > .contents #orderFrm .order_list .close {
+  position: absolute;
+  left: 0;
+  top: 0;
+  left: auto;
+  right: 10px;
+  top: 10px;
+}
+#wrap main .container > .contents #orderFrm .order_list .num_price {
+  position: absolute;
+  left: 0;
+  top: 0;
+  left: auto;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+#wrap main .container > .contents #orderFrm .order_list .num_price .num {
+  background: #fff;
+  display: inline-block;
+  padding: 5px 10px;
+}
+#wrap main .container > .contents #orderFrm .order_list .num_price .num button {
+  font-size: 1rem;
+  font-weight: 500;
+}
 #wrap main .container > .contents #orderFrm .order_list .num_price .num #order_num {
   width: 30px;
   text-align: center;
+}
+#wrap main .container > .contents #orderFrm .order_list .num_price .price {
+  padding: 10px;
 }
 #wrap main .container > .contents #orderFrm .order_price {
   display: flex;
@@ -294,22 +356,33 @@
   font-size: 1.25rem;
   font-weight: 800;
 }
-#wrap main .container > .contents #orderFrm .order_btn #cart_btn {
+#wrap main .container > .contents #orderFrm .order_price .price em {
+  font-weight: 600;
+}
+#wrap main .container > .contents #orderFrm .order_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 0;
+}
+#wrap main .container > .contents #orderFrm .order_btn button {
+  flex: 1;
   border: 1px solid #0aa5ff;
   border-radius: 5px;
   padding: 20px 0;
   margin-left: 10px;
+  background: #fff;
+  border: 1px solid #0aa5ff;
+}
+#wrap main .container > .contents #orderFrm .order_btn #cart_btn {
   width: 165px;
   font-size: 1.063rem;
   margin: 25px 0;
-  background-color: #fff;
-  color: #0aa5ff;
+  border-color: #0aa5ff;
 }
 #wrap main .container > .contents #orderFrm .order_btn #buy_btn {
-  border: 1px solid #0aa5ff;
-  border-radius: 5px;
-  padding: 20px 0;
-  margin-left: 10px;
   width: 165px;
   font-size: 1.063rem;
   margin: 25px 0;
