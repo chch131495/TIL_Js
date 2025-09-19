@@ -1,0 +1,33 @@
+//common.scss
+$font-size-s:0.75rem;
+$font-size-m:0.938rem;
+$font-size-ms:1.125rem;
+$font-size-l:1.25rem;
+$font-size-xl:1.875rem;
+$font-weight:700;
+$color-gray:#707070;
+$color-gray-light1:#9999;
+$color-point1:#008a48;
+$color-point2:#e63d3d;
+$line-height:130%;
+@mixin content-w{
+    max-width:1280px; margin:0 auto;
+}
+@mixin flex-row {
+    display:flex; flex-flow:row nowrap;
+    justify-content:flex-start; align-items:center;
+}
+@mixin flex-column {
+    display:flex; flex-flow:column nowrap;
+    justify-content:flex-start; align-items:center;
+}
+@mixin img {width:80px; height:80px; display:inline-block;}
+@mixin background-ima {
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    width:640px; height:640px;
+}
+@mixin cart_buyBtn {
+    width:192px; height:53px; padding:10px;
+}

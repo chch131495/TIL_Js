@@ -1,0 +1,118 @@
+#wrap .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 168px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+#wrap .container .img_group {
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+}
+#wrap .container .img_group .small a {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+#wrap .container .img_group .small img {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+}
+#wrap .container .img_group .big {
+  margin-left: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 640px;
+  height: 640px;
+}
+#wrap .container .img_group .big .photo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 640px;
+  height: 640px;
+  overflow: hidden;
+}
+#wrap .container .img_group .big .big1 {
+  background-image: url(../images/img-small001.jpg);
+}
+#wrap .container .img_group .big .big2 {
+  background-image: url(../images/img-small002.webp);
+  display: none;
+}
+#wrap .container .img_group .big .big3 {
+  background-image: url(../images/img-small003.jpg);
+  display: none;
+}
+#wrap .container .img_group .big .big4 {
+  background-image: url(../images/img-small004.jpg);
+  display: none;
+}
+#wrap .container .content {
+  background-color: aqua;
+  width: 100%;
+  height: 652px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+#wrap .container .content .title .review {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.75rem;
+}
+#wrap .container .content .title .review svg {
+  margin-right: 9px;
+}
+#wrap .container .content .title .review p {
+  margin-right: 9px;
+}
+#wrap .container .content .title .review a {
+  color: #707070;
+}
+#wrap .container .content .title .info h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 5px;
+  padding: 20px, 0;
+}
+#wrap .container .content .title .info p {
+  font-size: 0.938rem;
+  margin-top: 8px;
+}
+#wrap .container .content .price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+#wrap .container .content .price h2 {
+  font-size: 1.875rem;
+  color: #008a48;
+  font-weight: 700;
+}
+#wrap .container .content .price del {
+  font-size: 1.125rem;
+  color: rgba(153, 153, 153, 0.6);
+}
+
+/*# sourceMappingURL=main.css.map */

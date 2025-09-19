@@ -1,0 +1,83 @@
+@use './common.scss' as *;
+#wrap{
+    .container{@include content-w; margin-top:168px;
+        @include flex-row; // 부모에게 줘야함.
+        .img_group {
+            background-color:pink; 
+            @include flex-row; align-items:flex-start;
+            .small {
+                a {
+                    @include flex-column; align-items:flex-start;
+                    margin-bottom:10px;
+                }
+                img {@include img;}
+            }
+            .big {
+                margin-left:20px; 
+                @include flex-row; width:640px; height:640px;
+                .photo {
+                    @include background-ima; overflow:hidden;
+                }
+                .big1 {background-image:url(../images/img-small001.jpg);}
+                .big2 {background-image:url(../images/img-small002.webp); display:none;}
+                .big3 {background-image:url(../images/img-small003.jpg); display:none;}
+                .big4 {background-image:url(../images/img-small004.jpg); display:none;}
+            }
+            .page {
+                span .active {}
+                span {}
+            }
+        }
+        .content {background-color:aqua;
+            width:100%; height:652px;
+            @include flex-column; justify-content:flex-start; align-items:flex-start;
+            margin-left:20px;
+            .title {
+                .review {
+                    @include flex-row; font-size:$font-size-s;
+                    svg {margin-right:9px;}
+                    p {margin-right:9px;}
+                    a {color:$color-gray; }
+                }
+                .info {
+                    h1 {
+                        font-size:$font-size-xl; font-weight:$font-weight;
+                        margin-top:5px; padding:20px, 0;
+                    }
+                    p {font-size:$font-size-m; margin-top:8px;}
+                }
+            }
+            .price {@include flex-row; gap:4px;
+                h2 {
+                    font-size:$font-size-xl; color:$color-point1; font-weight:$font-weight;
+                }
+                del {font-size:$font-size-ms; color:$color-gray-light1;}
+                p {}
+                .max {}
+                .maxtotal {}
+                .rocket {}
+            }
+            .num_total {
+                p {}
+                .num {
+                    button {}
+                    #minus_btn {}
+                    #order_num {}
+                    #plus_btn {}
+                }
+            }
+            .order {
+                .price_order {
+                    .totalPrice {}
+                    .totalOrder {}
+                }
+                .shortcut {
+                    button {}
+                    .carBtn{}
+                    .buyBtn{}
+                    .present{}
+                }
+            }
+        }
+    }
+}
