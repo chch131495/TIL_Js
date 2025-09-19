@@ -69,7 +69,7 @@ console.log(bookMark);
 //로그인 시 wish.html 이동
 bookMark.addEventListener('click',()=>{
     isloginStatus = localStorage.getItem('isLogin')
-    if(isloginStatus == 'false'){//위 변수 이용한 조건 분기
+    if(isloginStatus == 'true'){//위 변수 이용한 조건 분기
     location.href = './login.html'//로그인 시 wish.html 이동
     }else{//로그인 실패 시
         location.href = './wish.html'
@@ -85,9 +85,9 @@ const productWrap = document.querySelector('main > .product_info')
 console.log(reviewBtn, reviewWrap, productInfoBtb, productWrap)
 reviewBtn[0].addEventListener('click',(e)=>{
     e.preventDefault() //a의 새로고침 기본 기능 막기
-    //스크롤 이동 window 함수 scrollTo(x,y) -> x,y는 얼마나 스크롤을 이동할것인지
     reviewBtn[0].addEventListener('click',(e)=>{e.preventDefault(); contentsPstFunc(reviewWrap)})
     reviewBtn[1].addEventListener('click',(e)=>{e.preventDefault(); contentsPstFunc(reviewWrap)})
+    //스크롤 이동 window 함수 scrollTo(x,y) -> x,y는 얼마나 스크롤을 이동할것인지
     //productInfoBtn.addEventListener('click',(e)=>{e.preventDefault(); contentsPstFunc(productWrap)}) -> 오류
     function contentsPstFunc(target){
         return function(e){
@@ -222,3 +222,65 @@ closeBtn.addEventListener('click', function(){
     colorSelect.selectedIndex = colorSelect.options[0] //색상 값 초기화
     sizeSelect.selectedIndex = sizeSelect.options[0] //사이즈 값 초기화
 })
+
+// 9. 주문목록 + 클릭 시 재고수량까지 주문수량+주문금액 표시
+// 필요목록 : +버튼, 재고수량(productOptDB[0].stock), 주문수량, 주문금액(orderPrice), 증가 숫자 데이터
+const plusBtn = document.querySelector('#plus_btn')
+const minusBtn = document.querySelector('#minus_btn')
+const orderNum = document.querySelector('#order_num')
+const orderListPrice = document.querySelector('.order_list .price')
+console.log(plusBtn, minusBtn, orderNum, orderListPrice)
+let num = 1; //초기주문수량
+
+//초기값 : 주문수량칸에 값 1 적용하기
+orderNum.value = num; // input -> valu, p -> textcontent
+
+// +버튼 클릭 시(plusBtn)/ 주문수량이 1씩 증가하고 /주문수량(productOptDB[0].stock)에 따라 가격 증가하기
+plusBtn.addEventListener('click',()=>{
+    if(num < productOptDB[0].stock){
+        num++;
+        minusPlusFunc()
+    }else{
+        alert('최대 구매 수량입니다.')
+    }
+})// 증가 버튼 끝
+//감소 버튼(minusBtn) 시작
+// 10. 주문목록 - 클릭 시 주문수량+주문금액 감소(수량이1 이라면 경고창 출력)
+minusBtn.addEventListener('click',()=>{
+    if(num > 1){
+        num--;
+        minusPlusFunc()
+    }else{
+        alert('최소 구매 수량입니다.')
+    }
+})
+function minusPlusFunc(){ //함수생성
+        let total = num * productOptDB[0].price
+        orderNum.value = num
+        orderListPrice.textContent = total.toLocaleString('ko-kr')
+        orderPrice.textContent = total.toLocaleString('ko-kr')
+        return
+}
+// 11. (상품 미선택 시) 장바구니, 바로구매 클릭 시 '상품선택하세요' 경고창 출력
+const cartBtn = document.querySelector('#cart_btn')
+const buyBtn = document.querySelector('#buy_btn')
+console.log(cartBtn, buyBtn)
+
+cartBtn.addEventListener('click',()=>{
+    cartBuyFunc('./cart.html')
+})
+buyBtn.addEventListener('click',()=>{
+    cartBuyFunc('./buy.html')
+})
+function cartBuyFunc(url){ //함수
+    if(colorSelect.selectedIndex == 0 || sizeSelect.selectedIndex == 0){ //상품 선택안한걸 확인하는 조건문
+        alert('옵션 선택 후에 버튼을 클릭해 주세요.')
+    }else{
+        //장바구니 페이지 이동 (로그인 유(장바구니) 무(로그인)에 따라)
+        isloginStatus = localStorage.getItem('islogin')
+        if(isloginStatus == 'true'){
+            location.href = url
+        }else {location.href= './login.html'}
+    }
+}
+// 12.😊(상품 선택 시) 장바구니, 바로구매 클릭 시 로그인 유무에 따라 다른 페이지로 이동
