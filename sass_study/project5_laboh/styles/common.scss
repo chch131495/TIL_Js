@@ -11,7 +11,7 @@ $color-point1:#008a48;
 $color-point2:#e63d3d;
 $line-height:130%;
 @mixin content-w{
-    max-width:1280px; margin:0 auto;
+    width: 1280px; min-width: 320px; margin: 0 auto;
 }
 @mixin flex-row {
     display:flex; flex-flow:row nowrap;
@@ -29,5 +29,5 @@ $line-height:130%;
     width:640px; height:640px;
 }
 @mixin cart_buyBtn {
-    width:192px; height:53px; padding:10px;
+    width:192px; height:53px;
 }

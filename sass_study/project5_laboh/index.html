@@ -26,12 +26,12 @@
                     <div class="photo big2"></div>
                     <div class="photo big3"></div>
                     <div class="photo big4"></div>
-                </div>
-                <div class="page">
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <div class="page">
+                        <span class="active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
                 </div>
             </div>
             <div class="content">
@@ -55,11 +55,16 @@
                     </div>
                 </div>
                 <div class="price">
-                    <h2>44,900원</h2>
-                    <del>72,000원</del>
-                    <p class="max">최대혜택가</p>
-                    <p class="maxtotal">40,410원</p>
-                    <p class="rocket">배송비무료</p>
+                    <div class="row1">
+                        <h2>44,900원</h2>
+                        <del>72,000원</del>
+                    </div>
+                    <div class="row2">
+                        <p class="max">최대혜택가 |</p>
+                        <p class="maxtotal">40,410원</p>
+                        <p class="rocket">배송비무료</p>
+                    </div>
+                    <div class="line"></div>
                 </div>
                 <div class="num_total">
                     <p>수량</p>
@@ -68,18 +73,30 @@
                             <input type="number" name="order_num" id="order_num">
                             <button type="button" id="plus_btn">+</button>
                         </div>
+                    <div class="line"></div>
                 </div>
                 <div class="order">
                     <div class="price_order">
                         <p class="totalPrice">총 상품금액</p>
                         <p class="totalOrder"><em>44,900원</em>(1개)</p>
                     </div>
-                    <div class="shortcut">
+                </div>
+                <div class="shortcut">
                         <button type="button" class="cartBtn">장바구니 담기</button>
                         <button type="button" class="buyBtn">구매하기</button>
-                        <button type="button" class="present">선물하기</button>
+                        <button type="button" class="giftBtn">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="30" height="30" fill="url(#pattern0_7_8)"/>
+                                <defs>
+                                <pattern id="pattern0_7_8" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_7_8" transform="scale(0.0078125)"/>
+                                </pattern>
+                                <image id="image0_7_8" width="128" height="128" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                                </defs>
+                            </svg>
+                            <p class="gift">선물</p>
+                        </button>
                     </div>
-                </div>
             </div>
         </div>
     </div>
