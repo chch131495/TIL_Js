@@ -1,37 +1,48 @@
 @use './common.scss' as *;
 #wrap{margin-top:80px;
-    .container{@include content-w;
+    .container{
+        @include content-w;
         @include flex-row; // 부모에게 줘야함.
         .img_group {
             @include flex-row; align-items:flex-start; 
-            .small {
+            .small { 
                 a {
                     @include flex-column; align-items:flex-start;
                     margin-bottom:10px; margin-right:10px;
                 }
                 img {@include img;}
             }
-            .big {
-                /* margin-left:10px; */
-                @include flex-row; width:640px; height:640px; position: relative;
-                .photo {
-                    @include background-ima; overflow:hidden;
+            .slider_group {
+                @include flex-row; width:640px; height:640px; position: relative; 
+                .slider_img {
+                    p {@include background-ima; overflow:hidden; position: relative;}
+                    .slider_img1 {background-image:url(../images/img-small001.jpg);}
+                    .slider_img2 {background-image:url(../images/imgi_10_8576716a08d743c65d048d261ae1e159.jpeg); display:none;}
+                    .slider_img3 {background-image:url(../images/img-small003.jpg); display:none;}
+                    .slider_img4 {background-image:url(../images/img-small004.jpg); display:none;}
                 }
-                .big1 {background-image:url(../images/img-small001.jpg);}
-                .big2 {background-image:url(../images/img-small002.webp); display:none;}
-                .big3 {background-image:url(../images/img-small003.jpg); display:none;}
-                .big4 {background-image:url(../images/img-small004.jpg); display:none;}
-                .page {
-                .active {position:absolute;}
-                span {position: absolute;
-                    left: 50%;
-                    bottom: 20px;
+                .sliderbtn {
+                    position:absolute; left:45%; bottom:5%;
+                .active {
+                    background-image:url("https://cdn-icons-png.flaticon.com/128/17494/17494521.png");
+                    background-size:cover; background-repeat:no-repeat; width:12px; height:12px;
+                }
+                .slider1 {
+                    background-size:cover; background-repeat:no-repeat; width:12px; height:12px;
+                    background-image:url("https://cdn-icons-png.flaticon.com/128/12604/12604094.png");
+                }
+                .slider2 {
+                    background-size:cover; background-repeat:no-repeat; width:12px; height:12px;
+                    background-image:url("https://cdn-icons-png.flaticon.com/128/12604/12604094.png");}
+                .slider3 {
+                    background-size:cover; background-repeat:no-repeat; width:12px; height:12px;
+                    background-image:url("https://cdn-icons-png.flaticon.com/128/12604/12604094.png");
                 }
             }
             }
         }
-        .content {/* background-color:aqua; */
-            width:512px; height:640px; margin-left:20px;
+        .content {/* background-color:aqua; */ position: relative;
+            width:512px; height:640px; margin-left:20px; 
             @include flex-column; justify-content:right; align-items:flex-start;
             .title {
                 .review {
@@ -66,13 +77,16 @@
                     }
                 }
                 .line {
-                    display:block;
-                    width:100%; height:1px; background-color:$color-gray-light1; //부모의 넓이만큼 크기를 가지지않음, 글자의 넓이만큼 가짐
+                    width:100%; 
+                    position:absolute; left:0; top:35%; margin-top:20px;
+                    border:1px solid $color-gray-light1;
                 }
             }
-            .num_total {@include flex-row; margin-top:20px; position:relative; width:100%;
+            .num_total {
+                @include flex-row; 
+                margin:50px 0 0; position:relative; width:100%; 
                 p {}
-                .num {position:absolute; right:0; top:50%; transform:translateY(-50%);//자식의 좌표 설정
+                .num {position:absolute; right:0; top:40%; transform:translateY(-40%);//자식의 좌표 설정
                     border:1px solid #ddd; background-color:#fff;
                     #minus_btn {
                         background-color:#fff; width:30px; height:30px;
@@ -80,9 +94,12 @@
                     #order_num {width:30px; height:30px; text-align:center; font-size:$font-size-m;}
                     #plus_btn {background-color:#fff; width:30px; height:30px;}
                 }
-                .line {}
+                .line {
+                    width:100%; margin-top:20px;
+                    position:absolute; left:0; top:300%; 
+                    border:1px solid $color-gray-light1;}
             }
-            .order {margin-top:30px; @include flex-row; position: relative; width:100%;
+            .order {margin:80px 0 40px;  @include flex-row; position: relative; width:100%;
                 .price_order {
                     .totalPrice {}
                     .totalOrder {
@@ -92,7 +109,9 @@
                     }
                 }
             }
-            .shortcut {margin-top:30px; @include flex-row; align-items:center; justify-content:center;
+            .shortcut {
+                margin:30px 20px;
+                @include flex-row; 
                     button {}
                     .cartBtn{margin:0 10px;
                         @include cart_buyBtn; border:1px solid $color-point1;
@@ -102,10 +121,17 @@
                         @include cart_buyBtn; background-color:$color-point1; margin-right:10px; 
                         color:#fff; font-weight:600; font-size:$font-size-m
                     }
-                    .giftBtn{ @include flex-column; justify-content:center;
-                        width:53px; height:53px; background-color:$color-point2;
-                        svg {}
-                        .gift {margin-top:5px; color:#fff; font-weight:600; font-size:$font-size-m;}
+                    .giftBtn{ @include flex-column; justify-content:center; position: relative;
+                        width:53px; height:53px; background-color:$color-point2; padding:5px;
+                        svg {position:absolute; left:15%; top:2.5%;}
+                        .gift {
+                                position:absolute; left:25%; top:55%;
+                                margin-top:5px; color:#fff; font-weight:600; font-size:$font-size-m;
+                            }   
+                    }
+                    .line {
+                        border:1px solid #000; width:100%; 
+                        position:absolute; left:0; top:88%;
                     }
                 }
         }

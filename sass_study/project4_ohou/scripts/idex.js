@@ -22,7 +22,7 @@ const thumnailA = document.querySelectorAll('.thumnail a');
 const thumnailOverView = document.querySelector('.overview img');
 console.log(thumnailA, thumnailOverView); //a*2->형제이기때문에, img->외동이기때문에
 
-//초기값(첫번째 써네일a가 보이고 있단 뜻으로 테두리가 있음)
+//초기값(첫번째 썸네일a가 보이고 있단 뜻으로 테두리가 있음)
 thumnailA[0].style.border = '2px solid #0aa5ff'
 
 //두번째 썸네일에 마우스 올리면 큰 이미지를 두번째 썸네일 이미지로 변경하기

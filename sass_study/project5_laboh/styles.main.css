@@ -31,7 +31,8 @@
   height: 80px;
   display: inline-block;
 }
-#wrap .container .img_group .slider_group {
+#wrap .container .img_group .big {
+  /* margin-left:10px; */
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -40,65 +41,39 @@
   height: 640px;
   position: relative;
 }
-#wrap .container .img_group .slider_group .slider_img p {
+#wrap .container .img_group .big .photo {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 640px;
   height: 640px;
   overflow: hidden;
-  position: relative;
 }
-#wrap .container .img_group .slider_group .slider_img .slider_img1 {
+#wrap .container .img_group .big .big1 {
   background-image: url(../images/img-small001.jpg);
 }
-#wrap .container .img_group .slider_group .slider_img .slider_img2 {
-  background-image: url(../images/imgi_10_8576716a08d743c65d048d261ae1e159.jpeg);
+#wrap .container .img_group .big .big2 {
+  background-image: url(../images/img-small002.webp);
   display: none;
 }
-#wrap .container .img_group .slider_group .slider_img .slider_img3 {
+#wrap .container .img_group .big .big3 {
   background-image: url(../images/img-small003.jpg);
   display: none;
 }
-#wrap .container .img_group .slider_group .slider_img .slider_img4 {
+#wrap .container .img_group .big .big4 {
   background-image: url(../images/img-small004.jpg);
   display: none;
 }
-#wrap .container .img_group .slider_group .sliderbtn {
+#wrap .container .img_group .big .page .active {
   position: absolute;
-  left: 45%;
-  bottom: 5%;
 }
-#wrap .container .img_group .slider_group .sliderbtn .active {
-  background-image: url("https://cdn-icons-png.flaticon.com/128/17494/17494521.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 12px;
-  height: 12px;
+#wrap .container .img_group .big .page span {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
 }
-#wrap .container .img_group .slider_group .sliderbtn .slider1 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 12px;
-  height: 12px;
-  background-image: url("https://cdn-icons-png.flaticon.com/128/12604/12604094.png");
-}
-#wrap .container .img_group .slider_group .sliderbtn .slider2 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 12px;
-  height: 12px;
-  background-image: url("https://cdn-icons-png.flaticon.com/128/12604/12604094.png");
-}
-#wrap .container .img_group .slider_group .sliderbtn .slider3 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 12px;
-  height: 12px;
-  background-image: url("https://cdn-icons-png.flaticon.com/128/12604/12604094.png");
-}
-#wrap .container .content { /* background-color:aqua; */
-  position: relative;
+#wrap .container .content {
+  background-color: aqua;
   width: 512px;
   height: 640px;
   margin-left: 20px;
@@ -185,27 +160,25 @@
   color: rgba(153, 153, 153, 0.6);
 }
 #wrap .container .content .price .line {
+  display: block;
   width: 100%;
-  position: absolute;
-  left: 0;
-  top: 35%;
-  margin-top: 20px;
-  border: 1px solid rgba(153, 153, 153, 0.6);
+  height: 1px;
+  background-color: rgba(153, 153, 153, 0.6);
 }
 #wrap .container .content .num_total {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 50px 0 0;
+  margin-top: 20px;
   position: relative;
   width: 100%;
 }
 #wrap .container .content .num_total .num {
   position: absolute;
   right: 0;
-  top: 40%;
-  transform: translateY(-40%);
+  top: 50%;
+  transform: translateY(-50%);
   border: 1px solid #ddd;
   background-color: #fff;
 }
@@ -225,16 +198,8 @@
   width: 30px;
   height: 30px;
 }
-#wrap .container .content .num_total .line {
-  width: 100%;
-  margin-top: 20px;
-  position: absolute;
-  left: 0;
-  top: 300%;
-  border: 1px solid rgba(153, 153, 153, 0.6);
-}
 #wrap .container .content .order {
-  margin: 80px 0 40px;
+  margin-top: 30px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -257,11 +222,13 @@
   margin-right: 10px;
 }
 #wrap .container .content .shortcut {
-  margin: 30px 20px;
+  margin-top: 30px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  align-items: center;
+  justify-content: center;
 }
 #wrap .container .content .shortcut .cartBtn {
   margin: 0 10px;
@@ -287,32 +254,15 @@
   justify-content: flex-start;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 53px;
   height: 53px;
   background-color: #e63d3d;
-  padding: 5px;
-}
-#wrap .container .content .shortcut .giftBtn svg {
-  position: absolute;
-  left: 15%;
-  top: 2.5%;
 }
 #wrap .container .content .shortcut .giftBtn .gift {
-  position: absolute;
-  left: 25%;
-  top: 55%;
   margin-top: 5px;
   color: #fff;
   font-weight: 600;
   font-size: 0.938rem;
 }
-#wrap .container .content .shortcut .line {
-  border: 1px solid #000;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 88%;
-}
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=styles.main.css.map */

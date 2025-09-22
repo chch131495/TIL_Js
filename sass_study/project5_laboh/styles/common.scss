@@ -24,7 +24,7 @@ $line-height:130%;
 @mixin img {width:80px; height:80px; display:inline-block;}
 @mixin background-ima {
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:cover; 
     background-position:center;
     width:640px; height:640px;
 }
