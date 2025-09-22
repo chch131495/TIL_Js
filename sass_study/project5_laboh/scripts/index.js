@@ -14,11 +14,19 @@ console.log(small, sliderImg);
 console.log(small[1]);
 
 //1-1 작은 이미지 클릭시 큰 상품 이미지 변경
+small[0].addEventListener('click',()=>{
+    sliderImg.style.backgroundImage = 'url(./images/img-small001.jpg)'
+})
 small[1].addEventListener('click',()=>{
     sliderImg.style.backgroundImage = 'url(./images/imgi_10_8576716a08d743c65d048d261ae1e159.jpeg)'
-    sliderImg.style.backgroundSize = 'contain'
-    sliderImg.style.backgroundPosition = 'center'
-    sliderImg.style.backgroundRepeat = 'no-repeat'
-    sliderImg.style.width = '640px'
-    sliderImg.style.height = '640px'
 })
+small[2].addEventListener('click',()=>{
+    sliderImg.style.backgroundImage = 'url(./images/img-small003.jpg)'
+})
+small[3].addEventListener('click',()=>{
+    sliderImg.style.backgroundImage = 'url(./images/img-small004.jpg)'
+})
+
+// 1-1. 상품 이미지가 변경 될때, 버튼 부분도 활성화/비활성화 진행
+sliderBtn = document.querySelectorAll('.slider');
+console.log(sliderBtn)

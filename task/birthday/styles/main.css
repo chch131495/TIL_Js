@@ -1,0 +1,23 @@
+#wrap {
+  background-color: aqua;
+}
+#wrap .flower {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  gap: 10px;
+}
+#wrap .flower label {
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+#wrap .result .class {
+  background-color: red;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,22 @@
+#wrap {background-color:aqua;
+    .flower {
+        width:500px; height:500px;
+        margin:0 auto;
+        display:flex; flex-flow:row nowrap; 
+        align-items:flex-start; gap: 10px;
+        label {
+            border:1px solid #ddd;
+            display: flex;         // label 안 내용물 정렬용
+            align-items: center;   // 세로 중앙
+            padding: 5px 10px;
+            }
+        }
+        #year {}
+        #month {}
+        #day {}
+        .submit {}
+        .result {
+        .class {background-color:red;}
+        span {}
+    }
+    }
