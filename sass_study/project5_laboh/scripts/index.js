@@ -16,23 +16,26 @@ console.log(small[1]);
 //1-1 작은 이미지 클릭시 큰 상품 이미지 변경
 small[0].addEventListener('click',()=>{
     sliderImg.style.backgroundImage = 'url(./images/img-small001.jpg)'
+    sliderBtnFunc()
 })
 small[1].addEventListener('click',()=>{
     sliderImg.style.backgroundImage = 'url(./images/imgi_10_8576716a08d743c65d048d261ae1e159.jpeg)'
-    //sliderBtnFunc()
+    sliderBtnFunc()
 })
 small[2].addEventListener('click',()=>{
     sliderImg.style.backgroundImage = 'url(./images/img-small003.jpg)'
+    sliderBtnFunc()
 })
 small[3].addEventListener('click',()=>{
     sliderImg.style.backgroundImage = 'url(./images/img-small004.jpg)'
+    sliderBtnFunc()
 })
 
 
 // 1-1. 버튼 부분 활성화/비활성화 진행
 const sliderBtn = document.querySelectorAll('.sliderbtn .slider') //버튼
 console.log(sliderBtn, sliderImg)//인덱스 사용
-for(let i=0; i<sliderBtn.length; i++){
+/* for(let i=0; i<sliderBtn.length; i++){
     sliderBtn[i].addEventListener('click',()=>{
         for(let j=0; j<sliderBtn.length; j++){
             sliderBtn[j].style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/128/12604/12604094.png')" // 버튼 클릭 시 비 활성화
@@ -43,15 +46,15 @@ for(let i=0; i<sliderBtn.length; i++){
         if(i === 2){sliderBtn[i] += sliderImg.style.backgroundImage = 'url(./images/img-small003.jpg)'}
         if(i === 3){sliderBtn[i] += sliderImg.style.backgroundImage = 'url(./images/img-small004.jpg)'}
     })
-}
+} */
 //버튼 클릭시 이미지 변경 -> 함수로 적용할려고하는데 적용이 되지않음
-/* function sliderBtnFunc (){
-    for(let i=0; i<sliderBtn.length; i++){
-        sliderBtn[i].addEventListener('click',()=>{
-            for(let j=0; j<sliderBtn.length; j++){
-                sliderBtn[j].style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/128/12604/12604094.png')" // 버튼 클릭 시 비 활성화
+function sliderBtnFunc(){
+    for(let i of sliderBtn){
+        i.addEventListener('click',()=>{
+            for(let j of sliderBtn){
+                j.style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/128/12604/12604094.png')" // 버튼 클릭 시 비 활성화
             }
-            sliderBtn[i].style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/128/17494/17494521.png')" // 버튼 클릭 시 활성화
+            i.style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/128/17494/17494521.png')" // 버튼 클릭 시 활성화
         })
     }
-} */
+}// 버튼 클릭시 이미지 변경되는 것은 만들기
