@@ -5,18 +5,20 @@
         display:flex; flex-flow:row nowrap; 
         align-items:flex-start; gap: 10px;
         label {
-            border:1px solid #ddd;
-            display: flex;         // label 안 내용물 정렬용
-            align-items: center;   // 세로 중앙
-            padding: 5px 10px;
+            display:flex; flex-flow:row nowrap; justify-content:center; align-items:center;
+            margin:20px 5px; font-size:0.875rem; font-weight:600;
             }
+        }
+        input {
+            width:100px; height:30px; margin:0 3px;
+            border-radius:10px; background-color:#f5f5f5;
         }
         #year {}
         #month {}
         #day {}
-        .submit {}
+        .submit {display:flex; flex-flow:column nowrap; align-items:center;}
         .result {
-        .class {background-color:red;}
+        .flower-img {display:none;}
         span {}
     }
     }

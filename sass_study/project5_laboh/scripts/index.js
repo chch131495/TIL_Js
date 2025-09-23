@@ -12,10 +12,10 @@ const small = document.querySelectorAll('.small a') //작은 이미지
 const sliderImg = document.querySelector('.slider_img p') //큰 이미지
 console.log(small, sliderImg);
 console.log(small[1]);
-
+/* img src를 가지고 올려면 똑같이 img태그를 사용해야지 불러올수 있고 backgroundimg를 사용하면 따로 style에서 backgroundimg를 사용해서 불러와야한다. */
 //1-1 작은 이미지 클릭시 큰 상품 이미지 변경
 small[0].addEventListener('click',()=>{
-    sliderImg.style.backgroundImage = 'url(./images/img-small001.jpg)'
+    sliderImg.style.backgroundImage = 'url(./images/img-small001.jpg)' 
 })
 small[1].addEventListener('click',()=>{
     sliderImg.style.backgroundImage = 'url(./images/imgi_10_8576716a08d743c65d048d261ae1e159.jpeg)'
