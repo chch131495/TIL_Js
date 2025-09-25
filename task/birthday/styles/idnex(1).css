@@ -1,0 +1,20 @@
+main {
+    width:440px; height:100vh;
+    margin:0 auto; padding:30px 15px 0;
+    text-align:center;
+}
+main h1 {font-weight:700; margin-bottom:10px;}
+main h2 {}
+main h2 em {font-weight:600;}
+main form {margin:50px 0 0;}
+main form > * {margin:20px 0 0;}
+main input {width:50px; border: 1px solid #ddd; border-radius:5px; gap:10px; text-align:center; font-size:0.875rem;}
+main button {border-radius:20px; background:#aaa; padding:10px; color:#fff; font-size:0.875rem;}
+main .flower {position:relative;}
+main .flower::before {
+    content:''; display:block;
+    width:100%; height:50%;
+    position:absolute; left:0; top:0;
+    background:linear-gradient(#fff 30%, transparent);
+}
+main .flower img{width:100%;}

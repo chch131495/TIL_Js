@@ -53,9 +53,9 @@ month:10,
 ]
 console.log(birthdayFlower, input);
 //사용자가 년/월/일을 입력 → 버튼 클릭 → 해당 월의 탄생화 이미지 + 꽃말 출력
-const showBtn = document.querySelector('.submit');
-const monthInput = document.getElementById('month');
-const flowerImg = document.querySelector('.flower-img');
+const showBtn = document.querySelector('.submit'); //탄생화와 꽃말
+const monthInput = document.getElementById('month'); //월
+const flowerImg = document.querySelector('.flower-img'); //탄생화 이미지
 const resultSpan = document.querySelector('.result span');
 
 showBtn.addEventListener('click', () => {
