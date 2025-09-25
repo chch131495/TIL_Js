@@ -8,11 +8,32 @@
     <script src="./scripts/math.js" defer></script>
 </head>
 <style>
-    body {margin:0 auto; display:flex; flex-flow:column wrap; justify-content:center; align-items:center;}
+    body {
+        margin:20px auto 0; display:flex; flex-flow:column wrap; justify-content:center; align-items:center;
+        padding-top:20px;
+        border:1px solid #ddd; border-radius:10px; width:1000px; height:auto;
+    }
     .min2 {}
     .min2 button {border-radius:10px; background-color:#aaa; color:#f5f5f5; padding:10px; font-size:0.875rem; font-weight:600; margin-bottom:10px;}
-    .min2 p {}
+    .min2 p {font-weight:700; margin:0 0 10px;}
     .min2 h2 {margin:10px 0; text-align:center; background-color:pink; color:#f5f5f5; border-radius:10px; padding:10px;}
+    .min2 ul {border:2px solid #f5f5f5; gap:10px; padding:10px 0; font-weight:600; text-align:center; border-radius:10px; margin-bottom:10px;}
+    .min_sort {display:flex; flex-flow:column wrap; align-items:center; justify-content:center;}
+    .min_sort button {background-color:#aaa; padding:10px; border-radius:10px; color:#fff; font-weight:600; margin-bottom:10px;}
+    .min_sort p {font-weight:800; margin-bottom:10px;}
+    .min_sort h2 {margin:10px 0; text-align:center; background-color:pink; color:#f5f5f5; border-radius:10px; padding:10px;}
+    .min_sort ul {text-align:center; border:1px solid #ddd; border-radius:5px;}
+    .calc {
+        display:flex; flex-flow:column wrap; 
+        align-items:center; justify-content:center;
+    }
+    .calc p {font-size:1.15rem; font-weight:700;}
+    .calc input{width:150px; border:1px solid #ddd; margin-bottom:10px; border-radius:5px; text-align:center; color:#aaa;}
+    .calc button {
+        background:#aaa; font-size:1.15rem; margin-bottom:10px;
+        font-weight:700; padding:10px; border-radius:10px;}
+    .result {font-weight:700;}
+    button {font-size:1.25rem; font-weight:700; border-radius:5px; background:pink; padding:10px; color:#fff;}
 </style>
 <body>
     <section class="min2">

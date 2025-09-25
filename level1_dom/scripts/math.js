@@ -44,9 +44,12 @@ const adDB = [{//배열.객체
 window.addEventListener('load',()=>{//window에 들어갈때마다 바뀌는것.
     const adSection = document.querySelector('.ad')
     const adRandom = Math.floor(Math.random() * 2)
+    const imgTag = document.querySelector('img')
     adSection.children[0].href = adDB[adRandom].link
     adSection.children[0].children[0].src = adDB[adRandom].src
     adSection.children[0].children[0].alt = adDB[adRandom].alt
+    imgTag.style.width = '500px'
+    imgTag.style.height = 'auto'
 })
 
 console.log('------------------------------------------')
@@ -58,6 +61,7 @@ const priceInput = document.querySelector('#price') //금액
 const personInput = document.querySelector('#person') //인원수
 const totalBtn = document.querySelector('#total_btn') //계산하기
 const calcResult = document.querySelector('.calc .result') //결과
+
 console.log(priceInput, personInput, totalBtn, calcResult)
 
 totalBtn.addEventListener('click',()=>{
