@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollTrigger | JS</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- scrollTrigger CDN (필수) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        body,html {
+            height:300vh;
+            background:linear-gradient(aqua, skyblue, lime);
+        }
+        main .bg {height:90vh; overflow:hidden;}
+        main .bg img {width:100%;}
+        main .bg2 img{opacity:0; transform:scale(1);}
+    </style>
+</head>
+<body>
+    <main>
+        <section class="bg bg1"><img src="https://i.pinimg.com/1200x/46/ff/f4/46fff486569be42dd1ab1881279eb6ed.jpg" alt=""></section>
+        <section class="bg bg2"><img src="https://i.pinimg.com/736x/47/40/4a/47404a4c972a15839ccb17626fe9f895.jpg" alt=""></section>
+        <section class="bg bg3"><img src="https://i.pinimg.com/736x/f4/ab/ba/f4abba1cffff3065096bb79d35002dfd.jpg" alt=""></section>
+        <section class="bg bg4"><img src="https://i.pinimg.com/736x/a3/9a/ec/a39aec2da87da164be68daaed90b0247.jpg" alt=""></section>
+    </main>
+    <script>
+        //DOMContentLoaded 이벤트 필요한 경우 : defer 업이 script를 head에 작성한 경우
+        //document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger) //필수
+            //스크롤 트리거 작성 시작
+            
+            //gsap.form('애니메이션 대상', {옵션:값, 옵션:값, 옵션:{옵션:값,},})
+
+            /*
+            gsap.from('애니메이션',{
+                scrollTrigger:{trigger:'트리거발동기준'},
+                스크롤애니메이션속성:값,
+                스크롤애니메이션속성:값,
+            }) */
+            gsap.to('.bg2 img',{ //to는 애니메이션 거꾸로 적용
+                scrollTrigger:{
+                    trigger:'.bg2',
+                    markers:true,
+                    start:'top 80%',
+                    end:'top 40%',
+                    scrub:true,
+                },
+                scale:2,
+                opacity:1,
+                duration:3,
+            })
+
+            //스크롤 트리거 작성 종료
+        //});
+    </script>
+</body>
+</html>
