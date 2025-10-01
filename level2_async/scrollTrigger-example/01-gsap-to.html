@@ -59,27 +59,20 @@
     <script>
         gsap.registerPlugin(ScrollTrigger) //필수 연결
         gsap.to('.bg2 h1',{
-            opacity:0,
-            x:-700,
-            y:-500,
-            scrollTrigger:{
-                trigger:gsapToTrigger('.bg2'),
-                start:'top 80%',
-                end:'top 40%',
-                scrub:true,
-            },
-            
+            scrollTrigger:gsapToTrigger('.bg2','play pause resume reset'),
+            x:300,
+            y:200,
         })
         gsap.to('.bg3 h1',{
-            scrollTrigger:{
-                trigger:gsapToTrigger('.bg3'),
-            },
-            scaleX:3,
+            scrollTrigger:gsapToTrigger('.bg2','play pause resume reset'),
+            x:300,
+            skewX:30,
         })
         /* gsap.to('.bg4 h1',{
             scrollTrigger:{
                 trigger:gsapToTrigger('.bg4', 'play none none none'),
-                scale:1.5
+                skewX:30,
+                skew:30,
             },
         }) */
         //span1 바로 시작 아래 -> 위(제자리) 1초 진행
